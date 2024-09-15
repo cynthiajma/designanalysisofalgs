@@ -1,7 +1,7 @@
-### Implement Kahn's Algorithm for topological sorting 
+### Implement Kahn's Algorithm for topological sorting (DAG)
 """
 Kahn's algorithm finds a topological ordering of a graph by repeatedly removing nodes
-in the graph which have no incoming edges (source nodes). 
+in the DIRECTED graph which have no incoming edges (source nodes). 
 
 When a node is removed from a graph, it is added to the topological ordering and its edges are removed.
 Then find next source node with no incoming edges and repeat. 
