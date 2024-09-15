@@ -21,6 +21,12 @@ class bellmanFord:
                 if distances[u] != float('inf'): 
                     if distances[u] + weight < distances[v]:
                         distances[v] = distances[u] + weight 
+                        
+        # Check for negative weight cycles on Nth iteration
+        for u, v, weight in self.graph:
+            if distances[u] != float('inf') and distances[u] + weight < distances[v]:
+                print("Graph contains a negative weight cycle.")
+                return
        
         return distances[destination]
         
